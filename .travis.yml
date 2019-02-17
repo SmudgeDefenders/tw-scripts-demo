@@ -12,12 +12,12 @@ install:
   - npm install -g tiddlywiki
 
 script:
-  - tiddlywiki /tw-scripts-demo/ --verbose --build index
+  - tiddlywiki --verbose --build index
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: /tw-scripts-demo/output
+  local_dir: output
   on:
     branch: master
